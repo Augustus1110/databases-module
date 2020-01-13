@@ -1,2 +1,6 @@
 Checkpoint 1 Databases: Introduction
 
+
+Exercises
+
+1. What data types do each of these values represent?
