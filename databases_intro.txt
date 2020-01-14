@@ -4,3 +4,121 @@ Checkpoint 1 Databases: Introduction
 Exercises
 
 1. What data types do each of these values represent?
+
+**Answer**
+
+a) "A Clockwork Orange" = String
+b) 42 = Integer
+c) 09/02/1945 = Date/Integer
+d) 98.7 = Float
+e) $15.99 = Float
+
+
+2. Explain when a database would be used. Explain when a text file would be used.
+
+**Answer**
+
+Databases are used to store larger amounts of data. A database system allows for data to be quickly read and changed and is ideal for when data must persist beyond the end of the program. A text file should be used when there will not be too many changes made to a shared database, and there is little risk of a first contributor's data being override by a second contributor's data entries. 
+
+
+3. Describe one difference between SQL and other programming languages.
+
+**Answer**
+
+Unlike many programming languages, SQL is a declarative rather than a procedural language. As such, we don't have to define an algorithm for how the database should search; instead, we tell the database what we are looking for and the database engine determines the most efficient way to return that data.
+
+
+4. In your own words, explain how the pieces of a database system fit together at a high level.
+
+**Answer**
+
+Databases display data using a table structure with columns that define what the data represents, and rows that make up a conceptual unit. Then they use a language called SQL to query and manipulate the data found in the database.
+
+
+5. Explain the meaning of table, row, column, and value.
+
+**Answer**
+
+Table = A structure with columns and rows.
+Row = Makes up a conceptual unit in a table.
+Column = Defines what that data in a table represents.
+Value = Some piece of information that the column name describes.
+
+6. List three data types that can be used in a table.
+
+**Answer**
+
+1. String
+2. Integer
+3. Float
+
+7. Given this payments table, provide an English description of the following queries and include their results:
+
+SELECT date, amount
+FROM payments;
+
+**Answer**
+
+What is the date and amount of all payments?
+5/1/2016   1500.00
+5/10/2016  37.00
+5/15/2016  124.93
+5/23/2016  54.72
+
+SELECT amount
+FROM payments
+WHERE amount > 500;
+
+**Answer**     
+
+Which payments are an amount over 500?
+1500.00
+
+SELECT *
+FROM payments
+WHERE payee = 'Mega Foods';
+
+**Answer**
+
+What is the Date, Payee, Amount, and Memo information for "Mega Foods"?
+
+Date = 5/15/2016
+Payee = Mega Foods
+Amount = 124.93
+Memo = Groceries
+
+
+8. Given this users table, write SQL queries using the following criteria and include the output:
+
+a) The email and sign-up date for the user named DeAndre Data.
+
+**Answer**
+
+SELECT email, signup
+FROM users
+WHERE name = 'DeAndre Data';
+
+email			signup
+datad@comcast.net	2012-01-20
+
+b) The user ID for the user with email 'aleesia.algorithm@uw.edu'.
+
+**Answer**
+
+SELECT userid
+FROM users
+WHERE email = 'aleesia.algorithm@uw.edu';
+
+userid
+1
+
+c) All the columns for the user ID equal to 4.
+
+**Answer**
+
+SELECT *
+FROM users
+WHERE userid = 4;
+
+userid  name              email               signup
+4       Brandy Boolean    bboolean@nasa.gov   1999-10-15
